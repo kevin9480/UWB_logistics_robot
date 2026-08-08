@@ -60,11 +60,11 @@ UWB(Ultra-Wideband) 통신만을 이용한 실내 위치추정과 A* 경로계�
 
 **tag_sender 부품 구성**
 
-![tag_sender 하드웨어](docs/hw-tag-sender.png)
+<img src="docs/hw-tag-sender.png" width="500">
 
 **receiver_controller 부품 구성**
 
-![receiver_controller 하드웨어](docs/hw-receiver.png)
+<img src="docs/hw-receiver.png" width="500">
 
 ---
 
@@ -95,11 +95,11 @@ UWB 삼각측량 특성상 발생하는 위치 측정 노이즈를 줄이기 위
 
 MATLAB과 아두이노 코드로 구상한 맵과 그리드 표현:
 
-![맵 그리드 구성](docs/map-grid.png)
+<img src="docs/map-grid.png" width="600">
 
 MATLAB으로 사전에 A* 경로 알고리즘을 검증한 결과 (다양한 출발/도착 조합):
 
-![MATLAB 경로 시뮬레이션](docs/matlab-astar-demo.png)
+<img src="docs/matlab-astar-demo.png" width="700">
 
 ### 4. 임계값 기반 도착 판정
 UWB의 실내 오차(±10cm)를 그대로 적용하면 좌표가 미세하게 흔들려 모터가 떨리는 문제가 있었습니다. 목표 좌표와의 거리가 **10cm 이내**면 도착한 것으로 판정하는 임계값 방식을 적용해 자연스러운 정지 동작을 구현했습니다.
@@ -119,11 +119,11 @@ UWB의 실내 오차(±10cm)를 그대로 적용하면 좌표가 미세하게 �
 
 논문 스펙(3m x 3m)과 동일한 크기로 구현한 실내 물류 창고 맵입니다.
 
-![실제 구현한 맵](docs/real-map.jpg)
+<img src="docs/real-map.jpg" width="600">
 
 ### 시연
 
-![주행 데모](docs/demo.gif)
+<img src="docs/demo.gif" width="450">
 
 [전체 시연 영상 보기](docs/demo-full.mp4)
 
@@ -143,4 +143,13 @@ UWB_logistics_robot/
 ├── docs/                      # 시스템 구성도, 데모 GIF, 결과 이미지
 └── paper/                     # 학회 논문 및 포스터 (KIEES 2024)
 ```
+
+---
+
+## 담당 역할
+
+4인 팀 프로젝트 중 다음 두 부분을 담당했습니다.
+
+- **RGB 센서 인식 기반 목표 지점 이동**: RGB 센서로 물품 색상을 인식해 정해진 목적지 좌표로 로봇이 이동하도록 구현
+- **이동평균 필터를 통한 위치 측정 정확도 개선**: UWB 삼각측량 과정에서 발생하는 좌표 노이즈를 이동평균 필터로 완화
 
