@@ -60,11 +60,11 @@ UWB(Ultra-Wideband) 통신만을 이용한 실내 위치추정과 A* 경로계�
 
 **tag_sender 부품 구성**
 
-<img src="docs/hw-tag-sender.png" width="500">
+<img src="docs/hw-tag-sender.png" width="450">
 
 **receiver_controller 부품 구성**
 
-<img src="docs/hw-receiver.png" width="500">
+<img src="docs/hw-receiver.png" width="305">
 
 ---
 
@@ -95,11 +95,11 @@ UWB 삼각측량 특성상 발생하는 위치 측정 노이즈를 줄이기 위
 
 MATLAB과 아두이노 코드로 구상한 맵과 그리드 표현:
 
-<img src="docs/map-grid.png" width="600">
+<img src="docs/map-grid.png" width="580">
 
 MATLAB으로 사전에 A* 경로 알고리즘을 검증한 결과 (다양한 출발/도착 조합):
 
-<img src="docs/matlab-astar-demo.png" width="700">
+<img src="docs/matlab-astar-demo.png" width="850">
 
 ### 4. 임계값 기반 도착 판정
 UWB의 실내 오차(±10cm)를 그대로 적용하면 좌표가 미세하게 흔들려 모터가 떨리는 문제가 있었습니다. 목표 좌표와의 거리가 **10cm 이내**면 도착한 것으로 판정하는 임계값 방식을 적용해 자연스러운 정지 동작을 구현했습니다.
@@ -122,8 +122,6 @@ UWB의 실내 오차(±10cm)를 그대로 적용하면 좌표가 미세하게 �
 <img src="docs/real-map.jpg" width="600">
 
 ### 시연
-
-<img src="docs/demo.gif" width="450">
 
 [전체 시연 영상 보기](docs/demo-full.mp4)
 
